@@ -1,0 +1,440 @@
+/* ===== Week 7: Base styles ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== Week 9: Typography ===== */
+
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f1ec;
+  color: #2f2a26;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", "Lato", Arial, Helvetica, sans-serif;
+  color: #2b211c;
+}
+
+h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 1.25rem 0 0.5rem 0;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+/* ===== Header ===== */
+
+header {
+  background-color: #d9d1c7;
+  padding: 16px 20px 0 20px;
+}
+
+/* ===== Sections ===== */
+
+section {
+  border: 1px solid #b7aea3;
+  padding: 18px;
+  margin-bottom: 24px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== Navigation ===== */
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #b7aea3;
+}
+
+header nav li {
+  float: left;
+}
+
+header nav a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+  border-right: 1px solid #d8d1c8;
+  color: #2b211c;
+  font-weight: 700;
+
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+header nav a:hover {
+  text-decoration: none;
+  background-color: #c8beb3;
+  color: #000;
+}
+
+/* ===== Week 10: Focus ===== */
+
+header nav a:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ===== Week 11: CSS sprites for nav icons ===== */
+
+/*
+header nav a.nav-home,
+header nav a.nav-work,
+header nav a.nav-contact {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 96px 32px;
+  padding-left: 46px;
+  min-width: 120px;
+  background-position-y: center;
+}
+
+header nav a.nav-home {
+  background-position: 12px center;
+}
+
+header nav a.nav-work {
+  background-position: -20px center;
+}
+
+header nav a.nav-contact {
+  background-position: -52px center;
+}
+*/
+
+/* ===== Hero ===== */
+
+.hero {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 64px 16px;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.55)),
+    url("../img/selfportrait.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #fff;
+  border: none;
+  background-color: transparent;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+
+  animation: softReveal 700ms ease-out;
+}
+
+.hero h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+/* ===== Feature ===== */
+
+.feature {
+  position: relative;
+  display: inline-block;
+  max-width: 420px;
+}
+
+.feature img {
+  display: block;
+  max-width: 100%;
+  border: 1px solid #8f8579;
+}
+
+.badge {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+
+  padding: 8px 14px;
+
+  background: rgba(32, 25, 22, 0.72);
+  color: #ffffff;
+}
+
+/* ===== Media ===== */
+
+img,
+video,
+audio,
+object {
+  max-width: 100%;
+  display: block;
+}
+
+figure {
+  margin: 0 0 16px 0;
+}
+
+figcaption {
+  margin-top: 8px;
+}
+
+/* ===== Table ===== */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #b7aea3;
+  padding: 10px;
+}
+
+caption {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* ===== Form ===== */
+
+form {
+  max-width: 700px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+select,
+textarea,
+button {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  padding: 8px;
+  max-width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+small {
+  display: block;
+  margin-top: -6px;
+  margin-bottom: 12px;
+}
+
+fieldset {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid #b7aea3;
+}
+
+fieldset label {
+  display: block;
+  margin-top: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ===== Week 14: Submit button polish ===== */
+
+button[type="submit"] {
+  border-radius: 8px;
+
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  background-color: #b7aea3;
+}
+
+/* ===== Week 10: Form Focus ===== */
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid #2b211c;
+  outline-offset: 2px;
+}
+
+/* ===== Footer ===== */
+
+footer {
+  border-top: 1px solid #b7aea3;
+  padding: 12px 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.08)
+    ),
+    #d9d1c7;
+}
+
+/* ===== Week 14: Projects Grid ===== */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Featured project ===== */
+
+@media screen and (min-width: 850px) {
+
+  .projects .project.featured {
+    grid-row: span 2;
+    display: grid;
+    align-content: center;
+    font-size: 1.05rem;
+  }
+
+}
+
+/* ===== Week 14: Project card polish ===== */
+
+.projects .project {
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+
+  padding: 14px;
+
+  background-color: rgba(255,255,255,0.85);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.projects .project:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.14);
+
+  background-color: rgba(255,255,255,0.96);
+}
+
+/* ===== Week 14: Soft reveal animation ===== */
+
+@keyframes softReveal {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.98) translateY(8px);
+    filter: blur(2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+
+}
+
+/* ===== Responsive breakpoints ===== */
+
+/* Medium screens */
+
+@media (max-width: 900px) {
+
+  section {
+    padding: 10px;
+  }
+
+  header nav a {
+    padding: 10px 12px;
+  }
+
+  .projects {
+    grid-template-columns:
+      repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+}
+
+/* Small screens */
+
+@media (max-width: 600px) {
+
+  header nav li {
+    float: none;
+  }
+
+  header nav a {
+    display: block;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+}
+
+/* ===== Week 14: Reduced motion accessibility ===== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+}
